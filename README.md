@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# Micrómetro - Medición de Tornillo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web interactiva para aprender a usar un micrómetro en la medición de tornillos métricos.
 
-## Available Scripts
+## 🎯 Descripción
 
-In the project directory, you can run:
+Tutorial interactivo paso a paso que enseña cómo utilizar correctamente un micrómetro para medir tornillos. Incluye visualizaciones dinámicas, ejemplos prácticos y una guía de referencia completa.
 
-### `npm start`
+## ✨ Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 📚 Tutorial Paso a Paso (10 pasos)
+1. Preparación y limpieza
+2. Calibración a cero
+3. Apertura del micrómetro
+4. Colocación del tornillo
+5. Ajuste inicial
+6. Ajuste fino con trinquete
+7. Lectura de escala principal
+8. Lectura del tambor
+9. Cálculo de medida total
+10. Retirada de la pieza
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🎨 Elementos Visuales
+- Micrómetro completo con todas sus partes
+- Tornillo que aparece/desaparece según el paso
+- Resaltado dinámico de las partes relevantes
+- Animaciones de pulso para enfatizar
+- Colores que cambian según el elemento enfocado
 
-### `npm test`
+### 🎮 Controles Interactivos
+- Botones de navegación (Anterior/Siguiente/Reiniciar)
+- Barra de progreso visual
+- Control deslizante manual para experimentar
+- Ejemplos rápidos de diferentes tornillos (M4, M6, M8, M10)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📊 Panel de Lectura
+- Muestra en tiempo real las tres lecturas
+- Resalta la lectura correspondiente a cada paso
+- Calcula automáticamente la medida total
+- Identifica el tipo de tornillo
 
-### `npm run build`
+### 📖 Guía de Referencia
+- Puntos clave para recordar
+- Cómo leer correctamente
+- Tabla de tornillos métricos comunes
+- Consejos importantes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Instalación y Uso
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Requisitos Previos
+- Node.js (v14 o superior)
+- npm (v6 o superior)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Instalación
 
-### `npm run eject`
+```bash
+# Clonar el repositorio
+git clone https://github.com/edfrutos/micrometro-medicion.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Navegar al directorio del proyecto
+cd micrometro-medicion
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Instalar dependencias
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Desarrollo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Iniciar servidor de desarrollo (puerto 3001)
+npm run dev
 
-## Learn More
+# O usar el comando estándar
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+La aplicación se abrirá automáticamente en [http://localhost:3001](http://localhost:3001)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Producción
 
-### Code Splitting
+```bash
+# Crear build de producción
+npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# El build estará en la carpeta /build
+```
 
-### Analyzing the Bundle Size
+## 🛠️ Tecnologías
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **React** 19.2.3 - Framework principal
+- **Tailwind CSS** 3.4.19 - Estilos
+- **Lucide React** 0.562.0 - Iconos
+- **Create React App** 5.0.1 - Configuración base
 
-### Making a Progressive Web App
+## 📁 Estructura del Proyecto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+micrometro-medicion/
+├── public/              # Archivos públicos
+├── src/
+│   ├── App.js          # Componente principal
+│   ├── App.css         # Estilos de la aplicación
+│   ├── index.js        # Punto de entrada
+│   ├── index.css       # Estilos globales con Tailwind
+│   └── micrometro-interactivo.jsx  # Componente del micrómetro
+├── .env                # Variables de entorno (puerto)
+├── .gitignore          # Archivos ignorados por Git
+├── package.json        # Dependencias y scripts
+├── tailwind.config.js  # Configuración de Tailwind
+└── README.md           # Este archivo
+```
 
-### Advanced Configuration
+## 🔧 Configuración
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Puerto del Servidor
+El servidor de desarrollo está configurado para ejecutarse en el puerto 3001. Puedes cambiar esto editando el archivo `.env`:
 
-### Deployment
+```env
+PORT=3001
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📝 Scripts Disponibles
 
-### `npm run build` fails to minify
+- `npm start` - Inicia el servidor de desarrollo
+- `npm run dev` - Alias para npm start
+- `npm run build` - Crea build de producción
+- `npm test` - Ejecuta los tests
+- `npm run eject` - Expone la configuración de Create React App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+## 👤 Autor
+
+**Eduardo de Frutos**
+- GitHub: [@edfrutos](https://github.com/edfrutos)
+
+## 🔗 Enlaces
+
+- Repositorio: [https://github.com/edfrutos/micrometro-medicion](https://github.com/edfrutos/micrometro-medicion)
+- Documentación adicional: Ver `Micrómetro-Medición de tornillo.md`
+
+## 📚 Recursos Adicionales
+
+Para más información sobre el uso del micrómetro y medición de tornillos, consulta el archivo `Micrómetro-Medición de tornillo.md` incluido en el proyecto.
