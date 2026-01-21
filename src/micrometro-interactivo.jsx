@@ -357,32 +357,42 @@ const MicrometroInteractivo = () => {
                 rx="5"
               />
               
-              {[...Array(15)].map((_, i) => (
+              {[...Array(21)].map((_, i) => (
                 <g key={i}>
                   <line
                     x1="510"
-                    y1={90 + i * 8}
-                    x2={i % 5 === 0 ? "530" : "520"}
-                    y2={90 + i * 8}
+                    y1={90 + i * 6}
+                    x2={i % 2 === 0 ? "530" : "520"}
+                    y2={90 + i * 6}
                     stroke={destacarElementos.includes('escala') ? "#fbbf24" : "#94a3b8"}
-                    strokeWidth={i % 5 === 0 ? "2" : "1"}
+                    strokeWidth={i % 2 === 0 ? "2" : "1"}
                   />
-                  {i % 5 === 0 && (
+                  {i % 2 === 0 && (
                     <text 
                       x="535" 
-                      y={95 + i * 8} 
+                      y={95 + i * 6} 
                       fill={destacarElementos.includes('escala') ? "#fbbf24" : "#e2e8f0"}
                       fontSize="12" 
                       fontWeight="bold"
                     >
-                      {i}
+                      {i / 2}
                     </text>
                   )}
                 </g>
               ))}
               
+              <line
+                x1="500"
+                y1={90 + mmEnteros * 12}
+                x2="510"
+                y2={90 + mmEnteros * 12}
+                stroke={destacarElementos.includes('escala') ? "#fbbf24" : "#ef4444"}
+                strokeWidth="3"
+                className={destacarElementos.includes('escala') ? 'animate-pulse' : ''}
+              />
+              
               <polygon
-                points={`680,${140 + (husillo / 50) * 8} 695,${135 + (husillo / 50) * 8} 695,${145 + (husillo / 50) * 8}`}
+                points={`500,${90 + mmEnteros * 12} 490,${85 + mmEnteros * 12} 490,${95 + mmEnteros * 12}`}
                 fill={destacarElementos.includes('escala') ? "#fbbf24" : "#ef4444"}
                 className={destacarElementos.includes('escala') ? 'animate-pulse' : ''}
               />
@@ -426,7 +436,7 @@ const MicrometroInteractivo = () => {
                           textAnchor="middle"
                           dominantBaseline="middle"
                         >
-                          {i}
+                          {50 - i}
                         </text>
                       )}
                     </g>
@@ -482,7 +492,7 @@ const MicrometroInteractivo = () => {
               
               <text x="150" y="180" fill="#cbd5e1" fontSize="14" fontWeight="bold">Yunque</text>
               <text x="300" y="180" fill="#cbd5e1" fontSize="14" fontWeight="bold">Husillo</text>
-              <text x="560" y="240" fill="#cbd5e1" fontSize="14" fontWeight="bold">Escala Principal</text>
+              <text x="510" y="240" fill="#cbd5e1" fontSize="14" fontWeight="bold">Escala Principal</text>
               <text x="660" y="240" fill="#cbd5e1" fontSize="14" fontWeight="bold">Tambor</text>
               <text x="740" y="200" fill="#cbd5e1" fontSize="14" fontWeight="bold">Trinquete</text>
             </svg>
